@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Good School</title>
+    <link rel="stylesheet" href="TAB.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Marketing Good School</h1>
+
+    <h2>Aktivní profily</h2>
+    <div id="profile-container">
+        <div class="field-container">
+            <input type="text" id="profile-name" placeholder="Název profilu">
+            <select id="profile-status">
+                <option value="aktivní">Aktivní</option>
+                <option value="neaktivní">Neaktivní</option>
+            </select>
+            <input type="text" id="profile-notes" placeholder="Poznámky">
+            <button onclick="addProfile()">Přidat</button>
+        </div>
+        <table id="profile-table">
+            <thead>
+                <tr>
+                    <th>Název profilu</th>
+                    <th>Status</th>
+                    <th>Poznámky</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <h2>Budget kalkulačka</h2>
+    <div id="budget-container">
+        <div class="field-container">
+            <input type="text" id="project-name" placeholder="Název projektu">
+            <input type="text" id="project-notes" placeholder="Poznámky a odkazy">
+            <input type="number" id="project-cost" placeholder="Cena v korunách">
+            <input type="date" id="project-deadline" placeholder="Termín">
+            <button onclick="addBudget()">Přidat</button>
+        </div>
+        <table id="budget-table">
+            <thead>
+                <tr>
+                    <th>Název projektu</th>
+                    <th>Poznámky a odkazy</th>
+                    <th>Cena v korunách</th>
+                    <th>Termín</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="sum-container">
+            <label for="sum">Součet:</label>
+            <input type="text" id="sum" readonly>
+        </div>
+    </div>
+
+    <div id="calendar-container">
+        <h2>Kalendář projektů</h2>
+        <div id="calendar">
+            <div class="calendar-header">
+                <button class="nav-button" onclick="prevMonth()"><i class="fas fa-chevron-left"></i></button>
+                <h3 id="month-year">Měsíc Rok</h3>
+                <button class="nav-button" onclick="nextMonth()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+        </div>
+    </div>
+
+    <script src="TAB.js"></script>
+</body>
+</html>
