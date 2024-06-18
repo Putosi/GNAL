@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihlášení</title>
+    <link rel="stylesheet" href="LoginTAB.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Přihlášení</h2>
+        <form id="loginForm">
+            <label for="username">Jméno:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Heslo:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="validateLogin()">Přihlásit</button>
+        </form>
+    </div>
+    <script src="LoginTAB.js"></script>
+</body>
+</html>
